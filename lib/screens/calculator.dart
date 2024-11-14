@@ -80,7 +80,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Calculator')),
+      appBar: AppBar(title: Text('Standard Calculator')),
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
