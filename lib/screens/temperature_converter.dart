@@ -68,6 +68,21 @@ class _TemperatureConverterScreenState
     }
   }
 
+  void _backspace() {
+    if (_controller.text.isNotEmpty) {
+      setState(() {
+        _controller.text =
+            _controller.text.substring(0, _controller.text.length - 1);
+        if (_controller.text.isNotEmpty) {
+          _convertTemperature();
+        } else {
+          _convertedTemperature = '';
+;
+        }
+      });
+    }
+  }
+
   void _convertTemperature() {
     String inputText = _controller.text;
     if (inputText.isEmpty || inputText == '.') {
@@ -230,7 +245,7 @@ class _TemperatureConverterScreenState
                       Container(),
                       _buildButton('⌫',
                           backgroundColor: Colors.orange[600],
-                          onPressed: _clearInput),
+                          onPressed: _backspace),
                       _buildButton('0', onPressed: () => _onButtonClick('0')),
                       _buildButton('C',
                           backgroundColor: Colors.red[400],
