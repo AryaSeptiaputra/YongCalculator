@@ -149,7 +149,7 @@ class _BinaryConverterScreenState extends State<BinaryConverterScreen> {
                       _convertedResult,
                       style: TextStyle(
                         fontSize: 32,
-                        color: Colors.purple[700],
+                        color: Colors.blue[700],
                       ),
                     ),
                     SizedBox(height: 20),
